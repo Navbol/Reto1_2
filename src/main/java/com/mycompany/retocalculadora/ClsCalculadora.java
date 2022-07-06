@@ -33,91 +33,102 @@ public class ClsCalculadora {
             JOptionPane.showMessageDialog(null, "Gracias por hacer uso de la Calculadora", "Calculadora", JOptionPane.DEFAULT_OPTION, null);
         }
         if (opcion == 1) {
-            String operacion = JOptionPane.showInputDialog(null,
-                    "Seleccione una operación:\n"
-                    + "1. Suma\n"
-                    + "2. Resta\n"
-                    + "3. Multiplicación\n"
-                    + "4. División\n"
-                    + "5. Potencia\n"
-                    + "6. Raíz cuadrada\n"
-                    + "7. Salir\n"
-            );
+            Devolver_Menu();
 
-            switch (operacion) {
-                case "1":
-                    String num_1 = JOptionPane.showInputDialog("Ingresa el primer numero");
-                    String num_2 = JOptionPane.showInputDialog("Ingresa el segundo numero");
+        }
 
-                    double numero1 = Double.parseDouble(num_1);
-                    double numero2 = Double.parseDouble(num_2);
+    }
 
-                    double resultado_suma = numero1 + numero2;
-                    JOptionPane.showMessageDialog(null, resultado_suma, "El resultado de la suma es:", JOptionPane.INFORMATION_MESSAGE);
-                    break;
+    public void Devolver_Menu() {
 
-                case "2":
-                    String num_3 = JOptionPane.showInputDialog("Ingresa el primer numero");
-                    String num_4 = JOptionPane.showInputDialog("Ingresa el segundo numero");
+        String operacion = JOptionPane.showInputDialog(null,
+                "Seleccione una operación:\n"
+                + "1. Suma\n"
+                + "2. Resta\n"
+                + "3. Multiplicación\n"
+                + "4. División\n"
+                + "5. Potencia\n"
+                + "6. Raíz cuadrada\n"
+                + "7. Salir\n"
+        );
 
-                    double numero3 = Double.parseDouble(num_3);
-                    double numero4 = Double.parseDouble(num_4);
+        switch (operacion) {
+            case "1":
+                String num_1 = JOptionPane.showInputDialog("Ingresa el primer numero");
+                String num_2 = JOptionPane.showInputDialog("Ingresa el segundo numero");
 
-                    double resultado_resta = numero3 - numero4;
-                    JOptionPane.showMessageDialog(null, resultado_resta, "El resultado de la resta es:", JOptionPane.INFORMATION_MESSAGE);
-                    break;
+                double numero1 = Double.parseDouble(num_1);
+                double numero2 = Double.parseDouble(num_2);
 
-                case "3":
-                    String num_5 = JOptionPane.showInputDialog("Ingresa el primer numero");
-                    String num_6 = JOptionPane.showInputDialog("Ingresa el segundo numero");
+                double resultado_suma = numero1 + numero2;
+                JOptionPane.showMessageDialog(null, resultado_suma, "El resultado de la suma es:", JOptionPane.INFORMATION_MESSAGE);
+                Devolver_Menu();
+                break;
 
-                    double numero5 = Double.parseDouble(num_5);
-                    double numero6 = Double.parseDouble(num_6);
+            case "2":
+                String num_3 = JOptionPane.showInputDialog("Ingresa el primer numero");
+                String num_4 = JOptionPane.showInputDialog("Ingresa el segundo numero");
 
-                    double resultado_multiplicacion = numero5 * numero6;
-                    JOptionPane.showMessageDialog(null, resultado_multiplicacion, "El resultado de la multiplicacion es:", JOptionPane.INFORMATION_MESSAGE);
-                    break;
+                double numero3 = Double.parseDouble(num_3);
+                double numero4 = Double.parseDouble(num_4);
 
-                case "4":
-                    String num_7 = JOptionPane.showInputDialog("Ingresa el primer numero");
-                    String num_8 = JOptionPane.showInputDialog("Ingresa el segundo numero");
+                double resultado_resta = numero3 - numero4;
+                JOptionPane.showMessageDialog(null, resultado_resta, "El resultado de la resta es:", JOptionPane.INFORMATION_MESSAGE);
+                Devolver_Menu();
+                break;
 
-                    double numero7 = Double.parseDouble(num_7);
-                    double numero8 = Double.parseDouble(num_8);
+            case "3":
+                String num_5 = JOptionPane.showInputDialog("Ingresa el primer numero");
+                String num_6 = JOptionPane.showInputDialog("Ingresa el segundo numero");
 
-                    double resultado_division = numero7 / numero8;
-                    if (numero8 == 0) {
-                        JOptionPane.showMessageDialog(null, resultado_division, "La divison entre cero no esta determina:", JOptionPane.INFORMATION_MESSAGE);
-                    }
+                double numero5 = Double.parseDouble(num_5);
+                double numero6 = Double.parseDouble(num_6);
 
-                    JOptionPane.showMessageDialog(null, resultado_division, "El resultado de la division es:", JOptionPane.INFORMATION_MESSAGE);
-                    break;
+                double resultado_multiplicacion = numero5 * numero6;
+                JOptionPane.showMessageDialog(null, resultado_multiplicacion, "El resultado de la multiplicacion es:", JOptionPane.INFORMATION_MESSAGE);
+                Devolver_Menu();
+                break;
 
-                case "5":
-                    String num_9 = JOptionPane.showInputDialog("Ingresa el primer numero");
-                    String num_10 = JOptionPane.showInputDialog("Ingresa el segundo numero");
+            case "4":
+                String num_7 = JOptionPane.showInputDialog("Ingresa el primer numero");
+                String num_8 = JOptionPane.showInputDialog("Ingresa el segundo numero");
 
-                    double numero9 = Double.parseDouble(num_9);
-                    double numero10 = Double.parseDouble(num_10);
-                    double resultado_potencia = Math.pow(numero9, numero10);
+                double numero7 = Double.parseDouble(num_7);
+                double numero8 = Double.parseDouble(num_8);
 
-                    JOptionPane.showMessageDialog(null, resultado_potencia, "El resultado de la potencia es:", JOptionPane.INFORMATION_MESSAGE);
-                    break;
+                double resultado_division = numero7 / numero8;
+                if (numero8 == 0) {
+                    JOptionPane.showMessageDialog(null, resultado_division, "La divison entre cero no esta determina:", JOptionPane.INFORMATION_MESSAGE);
+                }
 
-                case "6":
-                    String num_11 = JOptionPane.showInputDialog("Ingresa el primer numero");
+                JOptionPane.showMessageDialog(null, resultado_division, "El resultado de la division es:", JOptionPane.INFORMATION_MESSAGE);
+                Devolver_Menu();
+                break;
 
-                    int numero11 = Integer.parseInt(num_11);
+            case "5":
+                String num_9 = JOptionPane.showInputDialog("Ingresa el primer numero");
+                String num_10 = JOptionPane.showInputDialog("Ingresa el segundo numero");
 
-                    JOptionPane.showMessageDialog(null, " La potencia es igual a: " + Math.sqrt(numero11));
+                double numero9 = Double.parseDouble(num_9);
+                double numero10 = Double.parseDouble(num_10);
+                double resultado_potencia = Math.pow(numero9, numero10);
 
-                    break;
+                JOptionPane.showMessageDialog(null, resultado_potencia, "El resultado de la potencia es:", JOptionPane.INFORMATION_MESSAGE);
+                Devolver_Menu();
+                break;
 
-                case "7":
-                    JOptionPane.showMessageDialog(null, "Gracias por hacer uso de la Calculadora", "Calculadora", JOptionPane.DEFAULT_OPTION, null);
-                    System.exit(0);
+            case "6":
+                String num_11 = JOptionPane.showInputDialog("Ingresa el primer numero");
 
-            }
+                int numero11 = Integer.parseInt(num_11);
+
+                JOptionPane.showMessageDialog(null, " La raiz cuadrada es: " + Math.sqrt(numero11));
+                Devolver_Menu();
+                break;
+
+            case "7":
+                JOptionPane.showMessageDialog(null, "Gracias por hacer uso de la Calculadora", "Calculadora", JOptionPane.DEFAULT_OPTION, null);
+                System.exit(0);
 
         }
 
